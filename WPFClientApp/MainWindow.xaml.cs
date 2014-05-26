@@ -324,6 +324,7 @@ namespace WPFClientApp
                     _serverSocket.Shutdown(SocketShutdown.Both);
                     _serverSocket.Close();
                 }
+								
                 Application.Current.Shutdown();
             }
         }
