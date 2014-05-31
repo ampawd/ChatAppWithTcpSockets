@@ -110,8 +110,8 @@ namespace WPFClientApp
             Socket ss = (Socket)asyncResult.AsyncState;
             ss.EndSend(asyncResult);
 
-            //this.UpdateUsrList(ss);
-            this.StartMessageRecieveLoop(ss);            
+            this.UpdateUsrList(ss);
+            this.StartMessageRecieveLoop(ss);   
         }
 
         private void UpdateUsrList(Socket ss)
@@ -138,7 +138,7 @@ namespace WPFClientApp
                     GUIContext.Post(delegate
                     {
                          Allusers.Items.Add(_nickName + '\n');
-                    }, null);
+                    }, null);                             
                 }                
             }            
         }
@@ -149,7 +149,7 @@ namespace WPFClientApp
             {
                 ss.BeginReceive(_recievedFromAllBuffer, 0, _recievedFromAllBuffer.Length,
                     SocketFlags.None, OnChatMsgAllRecievedCallback, ss);
-            } 
+            }
         }
 
         private void SendMessageBtn_Click(object sender, RoutedEventArgs e)
@@ -328,5 +328,7 @@ namespace WPFClientApp
                 Application.Current.Shutdown();
             }
         }
+
+
     }
 }

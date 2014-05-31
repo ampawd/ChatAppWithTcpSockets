@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace WPFChatConsoleServer
 {
+   //   needs to user delegates and events to handle chat userlist
     class ChatServer
     {
         public int Port
@@ -116,11 +117,11 @@ namespace WPFChatConsoleServer
 
                 if (_clientsList.Count() >= 1)
                 {
-                    //this.BroadCastUsrList(_nickName, recieved);
+                    this.BroadCastUsrList(_nickName, recieved);
                 }
 
                 this.BeginMsgsReceiveLoop(cs);  
-            }                   
+            }
         }
 
         private void BroadCastUsrList(string data, int recieved)
