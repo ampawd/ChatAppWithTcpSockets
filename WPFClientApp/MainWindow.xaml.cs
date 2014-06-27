@@ -15,8 +15,6 @@ using System.Windows.Shapes;
 using System.Net;
 using System.Net.Sockets;
 using System.Threading;
-using System.Threading.Tasks;
-using System.IO;
 
 namespace WPFClientApp
 {
