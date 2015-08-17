@@ -1,3 +1,5 @@
 Chat Application developed using asynchronous TCP sockets for .NET 4.0 Framework
 
-used Visual Studio 2010 (C# + WPF)
+It consists of two parts: server (essentially, a simple TCP listener) and client application which connects through a socket to it.
+
+Technologies/tools used: Visual Studio 2010 (C# + WPF)
